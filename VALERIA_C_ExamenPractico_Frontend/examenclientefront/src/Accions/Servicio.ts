@@ -24,7 +24,7 @@ const actualizar = async (id:number, data:ICliente)=>{
     return await axios.put(base+endpoint,data)
 }
 
-export const LibroServicio ={
+export const ClienteServicio ={
     consulta,
     subir,
     eliminar,
