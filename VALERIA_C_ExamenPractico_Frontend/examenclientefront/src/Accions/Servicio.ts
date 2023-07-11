@@ -21,7 +21,7 @@ const consultaporid = async(id:number) =>{
 }
 
 const actualizar = async (id:number, data:ICliente)=>{
-    return await axios.put(base+endpoint,data)
+    return await axios.put(base+endpoint+id,data)
 }
 
 export const ClienteServicio ={

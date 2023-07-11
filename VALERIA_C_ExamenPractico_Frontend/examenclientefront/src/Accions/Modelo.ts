@@ -1,7 +1,7 @@
 export interface ICliente {
     id: number,
     name_complete: string,
-    birthdate: string,
+    birthdate?: number,
     address: string,
     city_CP: string,
     phone: string,

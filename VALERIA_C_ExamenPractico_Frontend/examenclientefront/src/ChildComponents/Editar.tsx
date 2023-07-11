@@ -18,7 +18,7 @@ export const Editar = (poop:IEditar) => {
     const[dCliente,setDCliente] = useState<ICliente>({
         id: 0,
         name_complete: 'null',
-        birthdate: 'null',
+        birthdate: 0,
         address: 'null',
         city_CP: 'null',
         phone: 'null',
@@ -74,11 +74,11 @@ export const Editar = (poop:IEditar) => {
         </FloatingLabel>
   
         <FloatingLabel controlId="floatingNameAuthor" label="Birthadte" className="mb-3">
-          <Form.Control value={dCliente.birthdate} 
+          <Form.Control value={dCliente.birthdate}  type='number'
           onChange={
             (event)=>{
               setDCliente(
-                {...dCliente, birthdate: event.target.value}
+                {...dCliente, birthdate: +event.target.value}
               )
             }
           }
